@@ -1,4 +1,7 @@
 /* inporting font */
+/* for thin italic */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 @font-face {
   font-family: "Poppins";
   src: url("./assets/fonts/Poppins-Regular.ttf"),
@@ -33,6 +36,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -81,6 +85,12 @@ body {
   letter-spacing: 2px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 input[type="number"] {
   width: 100%;
   padding: 1rem 1.5rem;
@@ -90,11 +100,20 @@ input[type="number"] {
   border-radius: 0.6rem;
   font-size: 3.2rem;
   font-weight: bolder;
+  appearance: textfield;
 }
 
 input[type="number"]::placeholder {
   text-transform: uppercase;
   color: var(--color-Light-grey);
+}
+
+.err-msg {
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-Light-red);
+  line-height: 1;
 }
 
 .btn {
@@ -170,6 +189,9 @@ input[type="number"]::placeholder {
 }
 
 @media screen and (max-width: 36.25em) {
+  .age-box {
+    padding: 2rem;
+  }
   input[type="number"] {
     font-size: 2.4rem;
   }

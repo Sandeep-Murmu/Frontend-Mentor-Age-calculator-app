@@ -23,20 +23,43 @@
             <div class="input-set">
               <div class="input-item">
                 <label for="day" class="label">day</label>
-                <input type="number" name="day" id="day" placeholder="dd" />
+                <input
+                  type="number"
+                  class="date-input"
+                  min="1"
+                  max="31"
+                  name="day"
+                  id="day"
+                  placeholder="dd"
+                />
+                <p class="err-msg"></p>
               </div>
               <div class="input-item">
                 <label for="month" class="label">month</label>
-                <input type="number" name="month" id="month" placeholder="mm" />
+                <input
+                  type="number"
+                  class="date-input"
+                  name="month"
+                  id="month"
+                  placeholder="mm"
+                />
+                <p class="err-msg"></p>
               </div>
               <div class="input-item">
                 <label for="year" class="label">year</label>
-                <input type="number" name="year" id="year" placeholder="yyyy"/>
+                <input
+                  type="number"
+                  class="date-input"
+                  name="year"
+                  id="year"
+                  placeholder="yyyy"
+                />
+                <p class="err-msg"></p>
               </div>
             </div>
           </div>
           <div class="btn">
-            <button type="submit">
+            <button type="submit" id="get-output">
               <img src="./assets/images/icon-arrow.svg" alt="arrow" />
             </button>
           </div>
@@ -48,5 +71,7 @@
         <div class="display-days"><span>- -</span> days</div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
